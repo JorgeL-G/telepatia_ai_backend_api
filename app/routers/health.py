@@ -1,21 +1,14 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from datetime import datetime
-from typing import Dict, Any
 import logging
 
+from fastapi import APIRouter, HTTPException
+from datetime import datetime
+from typing import Dict
 from app.database import MongoDBConnection
+from app.schemas.health import DbConnectionResponse
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/health", tags=["health"])
-
-
-class DbConnectionResponse(BaseModel):
-    """Response model for MongoDB database connection endpoint."""
-    timestamp: datetime
-    database_status: str
-    version: str
 
 
 @router.get("/db_connection", response_model=DbConnectionResponse)

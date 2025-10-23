@@ -1,5 +1,4 @@
 from pydantic_settings import BaseSettings
-from typing import Optional
 
 
 class Settings(BaseSettings):
@@ -16,6 +15,9 @@ class Settings(BaseSettings):
     # Server Configuration
     host: str = "0.0.0.0"
     port: int = 8000
+    
+    # Google GenAI Configuration
+    google_api_key: str = ""
     
     class Config:
         env_file = ".env"
