@@ -35,3 +35,5 @@ watchfiles==1.1.1
 websockets==14.2
 # numpy: deja que se resuelva automáticamente o fija <2 si usas audio científico pesado
 numpy==1.26.4
+torch==2.4.1
+torchaudio==2.4.1

@@ -52,6 +52,8 @@ dependencies = [
     "transformers>=4.57.1",
     "python-dotenv>=1.0.0",
     "python-multipart>=0.0.20",
+    "torch"==2.4.1,
+    "torchaudio"==2.4.1,
 ]
 
 [project.optional-dependencies]
